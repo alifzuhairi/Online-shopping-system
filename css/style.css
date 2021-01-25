@@ -1,0 +1,269 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a {
+	color: #0984e3;
+}
+
+body{
+	height: 830px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-repeat: repeat;
+}
+
+img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+	#text-search {
+		border-radius: 15px 50px 30px;
+		border: 2px solid #000000;
+		padding: 20px; 
+		width: 600px;
+		height: 5px; 
+	}
+
+header{
+	border-bottom: 1px solid gray;
+	position: static;
+}
+
+.top-header{
+	display: flex;
+}
+
+.top-header .left{
+	
+}
+
+.top-header .right{
+	margin-left: auto;
+}
+
+.top-header .right ul{
+	display: flex;
+	list-style: none;
+}
+
+.top-header .right ul li{
+	padding: 1px 5px;
+}
+
+.top-header .right ul li:not(:last-child){
+	border-right: 1px solid #333;
+
+}
+
+.bottom-header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+.bottom-header .site-info{
+	display: flex;
+	align-items: center;
+}
+
+.bottom-header .search {
+	width: 50vw;
+	position: relative;
+	padding: 0px 10px;
+}
+
+.bottom-header .search > i{
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.bottom-header .search input{
+	display: inline-block;;
+	width: 90%;
+	border-radius: 30px;
+	padding: 8px 30px;
+}
+
+.bottom-header .search button {
+    border: none;
+    background: #333;
+    color: #fff;
+    padding: 5px 7px;
+    outline: none;
+    font-size: 20px;
+}
+
+.cart{
+	font-size: 30px
+}
+
+main{
+	display: flex;
+}
+
+main .side-bar{
+	flex-basis: 12%;
+	border-right: 1px solid gray;
+	border-bottom: 1px solid gray;
+}
+
+main .side-bar .category,
+main .side-bar .price{
+	height: 220px;
+	overflow-y: auto;
+	padding: 10px;
+	border-bottom: 1px solid gray;
+}
+
+main .side-bar .category h4,
+main .side-bar .price h4{
+	margin-bottom: 10px;
+}
+
+.filter{
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+
+main .items{
+	flex-basis: 88%;
+	padding:10px; 
+	border-bottom: 1px solid gray;
+}
+
+main .items .navigator a:last-child{
+	color: #333;
+	text-decoration: none;
+}
+
+main .items .item-container{
+	display: flex;
+	margin-top: 20px;
+}
+
+.item-img{
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #333;
+	font-size: 100px;
+	flex-basis: 20%;
+}
+
+main .items .item-container .item-info{
+	padding-left: 20px;
+	margin-top: 20px;
+}
+
+main .items .item-container .item-info .item-desc{
+	margin-bottom: 35px;
+}
+
+main .items .item-container .qty{
+	margin-bottom: 10px;
+	margin-left: 47px;
+}
+
+main .items .item-container .qty input{
+	display: inline-block;
+	width: 40px;
+	height: 30px;
+}
+
+
+main .items .item-container .item-info .options button{
+	padding: 10px 30px;
+	outline: none;
+}
+
+
+.empty-div{
+	padding: 50px;
+}
+
+
+/***PAG2 ********/
+
+
+.show-item{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	justify-content: center;
+}
+
+.show-item .item{
+	flex-basis: 25%;
+	text-align: center;
+	padding: 10px 40px;
+}
+
+
+@media (max-width: 1250px){
+	
+	main .side-bar{
+		flex-basis: 15%;
+	}
+
+	main .items{
+		flex-basis: 85%;
+	}
+
+}
+
+@media (max-width: 992px) {
+	
+
+	.bottom-header .search input{
+		width: 70%;
+	}
+
+	.show-item .item {
+    	padding: 10px 10px;
+	}
+
+	main .side-bar{
+		flex-basis: 20%;
+	}
+
+	main .items{
+		flex-basis: 80%;
+	}
+
+
+
+}
+
+@media (max-width: 768px) {
+
+	
+
+	.show-item{
+		flex-direction: column;
+	}
+	.show-item .item {
+    	padding: 10px 0px;
+	}
+
+	main .side-bar{
+		flex-basis: 32%;
+	}
+
+	main .items{
+		flex-basis: 68%;
+	}
+	
+}
+
